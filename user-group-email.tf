@@ -41,3 +41,25 @@ resource "jumpcloud_user_group_association" "dl_valhalla_dex_1" {
   group_id  = jumpcloud_user_group.dl_valhalla_dex_1.id
   object_id = "6398f958c4650500012cb630"
 }
+
+resource "jumpcloud_user_group" "dl_thor_1" {
+  name    = "DL_thor_1"
+  members = [data.jumpcloud_user.powen.email, data.jumpcloud_user.berton.email]
+}
+
+resource "jumpcloud_user_group_association" "dl_thor_1" {
+  type      = "g_suite"
+  group_id  = jumpcloud_user_group.dl_thor_1.id
+  object_id = "6398f958c4650500012cb630"
+}
+
+resource "jumpcloud_user_group" "dl_maicoin" {
+  name    = "DL_maicoin"
+  members = [data.jumpcloud_user.powen.email, data.jumpcloud_user.david.email]
+}
+
+resource "jumpcloud_user_group_association" "dl_maicoin" {
+  type      = "g_suite"
+  group_id  = jumpcloud_user_group.dl_maicoin.id
+  object_id = "6398f958c4650500012cb630"
+}

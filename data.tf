@@ -125,3 +125,13 @@ data "jumpcloud_user" "stephen" {
 data "jumpcloud_user" "max" {
   email = "max@anticapital.ai"
 }
+
+# alpha-research members
+data "jumpcloud_user" "berton" {
+  email = "berton@anticapital.ai"
+}
+
+# operations members
+data "jumpcloud_user" "david" {
+  email = "david@anticapital.ai"
+}
