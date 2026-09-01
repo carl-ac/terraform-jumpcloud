@@ -183,7 +183,7 @@ resource "jumpcloud_user_group_association" "gf_nexus_prod_admin" {
 
 resource "jumpcloud_user_group" "gf_nexus_prod_editor" {
   name    = "GF_nexus_prod_editor"
-  members = concat(local.user_emails["nexus_member"], local.user_emails["ceo_member"])
+  members = concat(local.user_emails["nexus_member"], local.user_emails["ceo_member"], [data.jumpcloud_user.koki.email])
 }
 
 resource "jumpcloud_user_group_association" "gf_nexus_prod_editor" {
@@ -194,7 +194,7 @@ resource "jumpcloud_user_group_association" "gf_nexus_prod_editor" {
 
 resource "jumpcloud_user_group" "gf_nexus_prod_user" {
   name    = "GF_nexus_prod_user"
-  members = concat(local.user_emails["nexus_member"], local.user_emails["network_infra_member"], local.user_emails["ceo_member"])
+  members = concat(local.user_emails["nexus_member"], local.user_emails["network_infra_member"], local.user_emails["ceo_member"], [data.jumpcloud_user.koki.email])
 }
 
 resource "jumpcloud_user_group_association" "gf_nexus_prod_user" {
@@ -250,8 +250,12 @@ resource "jumpcloud_user_group_association" "gf_valhalla_prod_admin" {
 }
 
 resource "jumpcloud_user_group" "gf_valhalla_prod_editor" {
-  name    = "GF_valhalla_prod_editor"
-  members = local.user_emails["valhalla_member"]
+  name = "GF_valhalla_prod_editor"
+  members = concat(local.user_emails["valhalla_member"], [
+    data.jumpcloud_user.leticia.email,
+    data.jumpcloud_user.max.email,
+    data.jumpcloud_user.nicholas.email,
+  ])
 }
 
 resource "jumpcloud_user_group_association" "gf_valhalla_prod_editor" {
@@ -261,8 +265,12 @@ resource "jumpcloud_user_group_association" "gf_valhalla_prod_editor" {
 }
 
 resource "jumpcloud_user_group" "gf_valhalla_prod_user" {
-  name    = "GF_valhalla_prod_user"
-  members = concat(local.user_emails["valhalla_member"], local.user_emails["network_infra_member"])
+  name = "GF_valhalla_prod_user"
+  members = concat(
+    local.user_emails["valhalla_member"],
+    local.user_emails["network_infra_member"],
+    local.user_emails["data_infra_member"],
+  )
 }
 
 resource "jumpcloud_user_group_association" "gf_valhalla_prod_user" {

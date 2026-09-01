@@ -44,7 +44,7 @@ resource "jumpcloud_user_group_association" "dl_valhalla_dex_1" {
 
 resource "jumpcloud_user_group" "dl_thor_1" {
   name    = "DL_thor_1"
-  members = [data.jumpcloud_user.powen.email, data.jumpcloud_user.berton.email]
+  members = local.user_emails["valhalla_member"]
 }
 
 resource "jumpcloud_user_group_association" "dl_thor_1" {
@@ -55,7 +55,7 @@ resource "jumpcloud_user_group_association" "dl_thor_1" {
 
 resource "jumpcloud_user_group" "dl_maicoin" {
   name    = "DL_maicoin"
-  members = [data.jumpcloud_user.powen.email, data.jumpcloud_user.david.email]
+  members = [data.jumpcloud_user.powen.email]
 }
 
 resource "jumpcloud_user_group_association" "dl_maicoin" {

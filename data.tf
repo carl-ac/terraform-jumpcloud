@@ -58,10 +58,6 @@ data "jumpcloud_user" "gianluca" {
 }
 
 # data-infra members
-# data "jumpcloud_user" "becker" {
-#   email = "becker@anticapital.ai"
-# }
-
 data "jumpcloud_user" "jacob" {
   email = "jacob@anticapital.ai"
 }
@@ -70,31 +66,18 @@ data "jumpcloud_user" "ilan" {
   email = "ilan@anticapital.ai"
 }
 
-# data "jumpcloud_user" "ksingh" {
-#   email = "ksingh@anticapital.ai"
-# }
-
 # trading-infra members
 data "jumpcloud_user" "ziyu" {
   email = "ziyu@anticapital.ai"
 }
 
-# data "jumpcloud_user" "kevin" {
-#   email = "kevin@anticapital.ai"
-# }
-
-data "jumpcloud_user" "bowei" {
-  email = "bowei@anticapital.ai"
-}
-
-# immuna members
-data "jumpcloud_user" "chuanlu" {
-  email = "chuanlu@anticapital.ai"
-}
-
 # nexus members
 data "jumpcloud_user" "dara" {
   email = "dara@anticapital.ai"
+}
+
+data "jumpcloud_user" "koki" {
+  email = "koki@anticapital.ai"
 }
 
 # valhalla members
@@ -118,20 +101,14 @@ data "jumpcloud_user" "jake" {
   email = "jake@anticapital.ai"
 }
 
-data "jumpcloud_user" "stephen" {
-  email = "stephen@anticapital.ai"
-}
-
 data "jumpcloud_user" "max" {
   email = "max@anticapital.ai"
 }
 
-# alpha-research members
-data "jumpcloud_user" "berton" {
-  email = "berton@anticapital.ai"
+data "jumpcloud_user" "leticia" {
+  email = "leticia@anticapital.ai"
 }
 
-# operations members
-data "jumpcloud_user" "david" {
-  email = "david@anticapital.ai"
+data "jumpcloud_user" "nicholas" {
+  email = "nicholas@anticapital.ai"
 }
