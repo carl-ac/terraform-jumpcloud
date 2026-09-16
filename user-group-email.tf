@@ -63,3 +63,20 @@ resource "jumpcloud_user_group_association" "dl_maicoin" {
   group_id  = jumpcloud_user_group.dl_maicoin.id
   object_id = "6398f958c4650500012cb630"
 }
+
+resource "jumpcloud_user_group" "dl_qsg_service" {
+  name = "DL_qsg_service"
+  members = [
+    data.jumpcloud_user.carl.email,
+    data.jumpcloud_user.max.email,
+    data.jumpcloud_user.gianluca.email,
+    data.jumpcloud_user.beatrice.email,
+    data.jumpcloud_user.jake.email,
+  ]
+}
+
+resource "jumpcloud_user_group_association" "dl_qsg_service" {
+  type      = "g_suite"
+  group_id  = jumpcloud_user_group.dl_qsg_service.id
+  object_id = "6398f958c4650500012cb630"
+}

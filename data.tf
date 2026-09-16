@@ -112,3 +112,7 @@ data "jumpcloud_user" "leticia" {
 data "jumpcloud_user" "nicholas" {
   email = "nicholas@anticapital.ai"
 }
+
+data "jumpcloud_user" "beatrice" {
+  email = "beatrice@anticapital.ai"
+}

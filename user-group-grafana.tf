@@ -104,7 +104,7 @@ resource "jumpcloud_user_group_association" "gf_network_infra_prod_user" {
 # immuna prod
 resource "jumpcloud_user_group" "gf_immuna_prod_admin" {
   name    = "GF_immuna_prod_admin"
-  members = local.user_emails["network_infra_member"]
+  members = concat(local.user_emails["network_infra_member"], [data.jumpcloud_user.ziyu.email])
 }
 
 resource "jumpcloud_user_group_association" "gf_immuna_prod_admin" {
