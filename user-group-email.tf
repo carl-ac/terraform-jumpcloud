@@ -80,3 +80,18 @@ resource "jumpcloud_user_group_association" "dl_qsg_service" {
   group_id  = jumpcloud_user_group.dl_qsg_service.id
   object_id = "6398f958c4650500012cb630"
 }
+
+resource "jumpcloud_user_group" "dl_umx" {
+  name = "DL_umx"
+  members = [
+    data.jumpcloud_user.max.email,
+    data.jumpcloud_user.powen.email,
+    data.jumpcloud_user.joyce.email,
+  ]
+}
+
+resource "jumpcloud_user_group_association" "dl_umx" {
+  type      = "g_suite"
+  group_id  = jumpcloud_user_group.dl_umx.id
+  object_id = "6398f958c4650500012cb630"
+}

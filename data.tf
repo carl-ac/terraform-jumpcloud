@@ -105,6 +105,10 @@ data "jumpcloud_user" "max" {
   email = "max@anticapital.ai"
 }
 
+data "jumpcloud_user" "joyce" {
+  email = "joyce@anticapital.ai"
+}
+
 data "jumpcloud_user" "leticia" {
   email = "leticia@anticapital.ai"
 }
