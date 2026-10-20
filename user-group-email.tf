@@ -102,7 +102,6 @@ resource "jumpcloud_user_group" "dl_andr_2" {
     data.jumpcloud_user.powen.email,
     data.jumpcloud_user.bohao.email,
     data.jumpcloud_user.bob.email,
-    data.jumpcloud_user.carl.email,
   ]
 }
 
@@ -118,7 +117,6 @@ resource "jumpcloud_user_group" "dl_andr_1" {
     data.jumpcloud_user.powen.email,
     data.jumpcloud_user.bohao.email,
     data.jumpcloud_user.bob.email,
-    data.jumpcloud_user.carl.email,
   ]
 }
 
