@@ -95,3 +95,18 @@ resource "jumpcloud_user_group_association" "dl_umx" {
   group_id  = jumpcloud_user_group.dl_umx.id
   object_id = "6398f958c4650500012cb630"
 }
+
+resource "jumpcloud_user_group" "dl_andr_2" {
+  name = "DL_andr_2"
+  members = [
+    data.jumpcloud_user.powen.email,
+    data.jumpcloud_user.bohao.email,
+    data.jumpcloud_user.bob.email,
+  ]
+}
+
+resource "jumpcloud_user_group_association" "dl_andr_2" {
+  type      = "g_suite"
+  group_id  = jumpcloud_user_group.dl_andr_2.id
+  object_id = "6398f958c4650500012cb630"
+}
