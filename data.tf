@@ -76,10 +76,6 @@ data "jumpcloud_user" "dara" {
   email = "dara@anticapital.ai"
 }
 
-data "jumpcloud_user" "koki" {
-  email = "koki@anticapital.ai"
-}
-
 # valhalla members
 data "jumpcloud_user" "cindy" {
   email = "cindy@anticapital.ai"

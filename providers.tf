@@ -7,6 +7,6 @@ terraform {
   }
 }
 
-provider "jumpcloud" {
-  api_key = var.jumpcloud_api_key
-}
+# The API key comes from the JUMPCLOUD_API_KEY environment variable.
+# Run with: op run --env-file=op.env -- terraform plan
+provider "jumpcloud" {}

@@ -183,7 +183,7 @@ resource "jumpcloud_user_group_association" "gf_nexus_prod_admin" {
 
 resource "jumpcloud_user_group" "gf_nexus_prod_editor" {
   name    = "GF_nexus_prod_editor"
-  members = concat(local.user_emails["nexus_member"], local.user_emails["ceo_member"], [data.jumpcloud_user.koki.email])
+  members = concat(local.user_emails["nexus_member"], local.user_emails["ceo_member"])
 }
 
 resource "jumpcloud_user_group_association" "gf_nexus_prod_editor" {
@@ -194,7 +194,7 @@ resource "jumpcloud_user_group_association" "gf_nexus_prod_editor" {
 
 resource "jumpcloud_user_group" "gf_nexus_prod_user" {
   name    = "GF_nexus_prod_user"
-  members = concat(local.user_emails["nexus_member"], local.user_emails["network_infra_member"], local.user_emails["ceo_member"], [data.jumpcloud_user.koki.email])
+  members = concat(local.user_emails["nexus_member"], local.user_emails["network_infra_member"], local.user_emails["ceo_member"])
 }
 
 resource "jumpcloud_user_group_association" "gf_nexus_prod_user" {
