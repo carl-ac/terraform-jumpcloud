@@ -125,3 +125,17 @@ resource "jumpcloud_user_group_association" "dl_andr_1" {
   group_id  = jumpcloud_user_group.dl_andr_1.id
   object_id = "6398f958c4650500012cb630"
 }
+
+resource "jumpcloud_user_group" "dl_1token" {
+  name = "DL_1token"
+  members = [
+    data.jumpcloud_user.max.email,
+    data.jumpcloud_user.powen.email,
+  ]
+}
+
+resource "jumpcloud_user_group_association" "dl_1token" {
+  type      = "g_suite"
+  group_id  = jumpcloud_user_group.dl_1token.id
+  object_id = "6398f958c4650500012cb630"
+}
