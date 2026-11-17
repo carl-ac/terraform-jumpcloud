@@ -39,34 +39,3 @@ import {
   id = "68510e52a2c49000015ae90e/${data.jumpcloud_application.grafana_oidc_prod_nexus.id}/application"
   to = jumpcloud_user_group_association.gf_nexus_prod_user
 }
-
-# grafana nexus uat
-import {
-  id = "684aa45055a5830001d38fb2"
-  to = jumpcloud_user_group.gf_nexus_uat_admin
-}
-
-import {
-  id = "684aa45055a5830001d38fb2/${data.jumpcloud_application.grafana_oidc_uat_nexus.id}/application"
-  to = jumpcloud_user_group_association.gf_nexus_uat_admin
-}
-
-import {
-  id = "684aa459850a1b0001b74972"
-  to = jumpcloud_user_group.gf_nexus_uat_editor
-}
-
-import {
-  id = "684aa459850a1b0001b74972/${data.jumpcloud_application.grafana_oidc_uat_nexus.id}/application"
-  to = jumpcloud_user_group_association.gf_nexus_uat_editor
-}
-
-import {
-  id = "684aa45fd3458e0001f5048f"
-  to = jumpcloud_user_group.gf_nexus_uat_user
-}
-
-import {
-  id = "684aa45fd3458e0001f5048f/${data.jumpcloud_application.grafana_oidc_uat_nexus.id}/application"
-  to = jumpcloud_user_group_association.gf_nexus_uat_user
-}
