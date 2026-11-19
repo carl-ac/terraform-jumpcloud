@@ -41,11 +41,6 @@ data "jumpcloud_user" "ilan" {
   email = "ilan@anticapital.ai"
 }
 
-# trading-infra members
-data "jumpcloud_user" "ziyu" {
-  email = "ziyu@anticapital.ai"
-}
-
 # nexus members
 data "jumpcloud_user" "dara" {
   email = "dara@anticapital.ai"

@@ -15,9 +15,7 @@ locals {
       data.jumpcloud_user.jacob.email,
       data.jumpcloud_user.ilan.email,
     ]
-    "trading_infra_member" = [
-      data.jumpcloud_user.ziyu.email,
-    ]
+    "trading_infra_member" = []
     "network_infra_member" = [
       data.jumpcloud_user.carl.email,
       data.jumpcloud_user.gianluca.email,
