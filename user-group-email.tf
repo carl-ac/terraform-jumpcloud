@@ -139,3 +139,72 @@ resource "jumpcloud_user_group_association" "dl_1token" {
   group_id  = jumpcloud_user_group.dl_1token.id
   object_id = "6398f958c4650500012cb630"
 }
+
+resource "jumpcloud_user_group" "dl_ecobra_2" {
+  name    = "DL_ecobra_2"
+  members = []
+}
+
+resource "jumpcloud_user_group_association" "dl_ecobra_2" {
+  type      = "g_suite"
+  group_id  = jumpcloud_user_group.dl_ecobra_2.id
+  object_id = "6398f958c4650500012cb630"
+}
+
+resource "jumpcloud_user_group" "dl_ecobra_3" {
+  name = "DL_ecobra_3"
+  members = [
+    data.jumpcloud_user.bob.email,
+    data.jumpcloud_user.powen.email,
+  ]
+}
+
+resource "jumpcloud_user_group_association" "dl_ecobra_3" {
+  type      = "g_suite"
+  group_id  = jumpcloud_user_group.dl_ecobra_3.id
+  object_id = "6398f958c4650500012cb630"
+}
+
+resource "jumpcloud_user_group" "dl_cobra5" {
+  name    = "DL_cobra5"
+  members = []
+}
+
+resource "jumpcloud_user_group_association" "dl_cobra5" {
+  type      = "g_suite"
+  group_id  = jumpcloud_user_group.dl_cobra5.id
+  object_id = "6398f958c4650500012cb630"
+}
+
+resource "jumpcloud_user_group" "dl_cobra6" {
+  name    = "DL_cobra6"
+  members = []
+}
+
+resource "jumpcloud_user_group_association" "dl_cobra6" {
+  type      = "g_suite"
+  group_id  = jumpcloud_user_group.dl_cobra6.id
+  object_id = "6398f958c4650500012cb630"
+}
+
+resource "jumpcloud_user_group" "dl_cobra7" {
+  name    = "DL_cobra7"
+  members = []
+}
+
+resource "jumpcloud_user_group_association" "dl_cobra7" {
+  type      = "g_suite"
+  group_id  = jumpcloud_user_group.dl_cobra7.id
+  object_id = "6398f958c4650500012cb630"
+}
+
+resource "jumpcloud_user_group" "dl_cobra8" {
+  name    = "DL_cobra8"
+  members = []
+}
+
+resource "jumpcloud_user_group_association" "dl_cobra8" {
+  type      = "g_suite"
+  group_id  = jumpcloud_user_group.dl_cobra8.id
+  object_id = "6398f958c4650500012cb630"
+}
