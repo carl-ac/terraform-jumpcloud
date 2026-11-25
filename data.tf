@@ -23,6 +23,13 @@ data "jumpcloud_application" "grafana_oidc_prod_valhalla" {
   display_label = "Grafana OIDC - Production Valhalla"
 }
 
+// SD-1584: QuestDB Enterprise web console at tram-questdb.anticapital.int.
+// Created in the JumpCloud console (public client, PKCE, group attribute memberOf).
+data "jumpcloud_application" "questdb_oidc_tram_prod" {
+  name          = "QuestDB - Tram Production"
+  display_label = "QuestDB - Tram Production"
+}
+
 # network-infra members
 data "jumpcloud_user" "carl" {
   email = "carl@anticapital.ai"
